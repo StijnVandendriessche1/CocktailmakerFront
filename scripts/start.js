@@ -159,8 +159,12 @@ const checkLogout = function(jsonObject)
 
 //make cocktail----------------------------------------------------------------------------------------------------------------------
 //make cocktail (not complete)
-const makeCocktail = function (id) {
-  console.log(id);
+const makeCocktail = function (id) 
+{
+  handleData(standaardUrl + `make/${id}`, function(jsonObject)
+  {
+    alert(jsonObject.result);
+  }, "POST", standaardbody);
 }
 
 //listeners (everything that happens when there is a certain action)----------------------------------------------------------------
